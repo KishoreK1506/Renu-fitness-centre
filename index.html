@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Coaching | Renu's Fitness Centre</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Online coaching built around your schedule. Training, nutrition guidance, and weekly accountability." />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">RF</span>
+        <span class="brand-text">Renu's Fitness Centre</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#for-you">Is it for you?</a>
+        <a href="#apply">Apply</a>
+        <a href="#testimonials">Testimonials</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm" href="#apply">Book a free chat</a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#how">How it works</a>
+      <a href="#for-you">Is it for you?</a>
+      <a href="#apply">Apply</a>
+      <a href="#testimonials">Testimonials</a>
+      <a class="btn btn-primary" href="#apply">Book a free chat</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="pill">Online Coaching</p>
+        <h1>Coaching that fits your life — not the other way around</h1>
+        <p class="lead">
+          Busy schedule? No problem. You’ll get a plan built around your routine,
+          with weekly check-ins and real accountability so progress actually sticks.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#apply">I’m in — apply now</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <div class="trust-num">1:1</div>
+            <div class="trust-label">Personalised plans</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">Weekly</div>
+            <div class="trust-label">Check-ins & adjustments</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">Simple</div>
+            <div class="trust-label">Nutrition guidance</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <h3>Your plan includes</h3>
+          <ul class="checks">
+            <li>Training plan built for your schedule</li>
+            <li>Weekly check-ins (so you’re never guessing)</li>
+            <li>Ongoing support + plan tweaks</li>
+            <li>Nutrition guidance you can maintain</li>
+            <li>Progress that doesn’t depend on motivation</li>
+          </ul>
+          <a class="btn btn-primary full" href="#apply">Apply for coaching</a>
+          <p class="tiny">No pressure. Quick chat to see if it’s a fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head">
+        <h2>Because you don’t need another “30-day burnout plan”</h2>
+        <p>
+          You need a system you can repeat. We keep it doable, sustainable, and effective —
+          with structure, feedback, and accountability.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature">
+          <h3>1) Assess</h3>
+          <p>We start with goals, schedule, injuries, equipment, and current habits.</p>
+        </div>
+        <div class="feature">
+          <h3>2) Build</h3>
+          <p>You get a clear plan for training + nutrition that fits your week.</p>
+        </div>
+        <div class="feature">
+          <h3>3) Adjust</h3>
+          <p>Weekly check-ins to refine the plan and keep progress moving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For you -->
+  <section class="section alt" id="for-you">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h2>This is for you if…</h2>
+          <ul class="checks big">
+            <li>You’re tired of restarting and want consistency</li>
+            <li>You want to feel stronger, leaner, and more confident</li>
+            <li>You know what to do, but struggle to stick with it</li>
+            <li>You want structure + support around real life</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <h3>Renu's Fitness Centre coaching approach</h3>
+          <p>
+            Train at home, gym, or wherever works. We design around your routine —
+            not a fantasy schedule.
+          </p>
+          <p class="muted">
+            No extreme rules. No guilt. Just a plan you can follow and feedback when things get messy.
+          </p>
+          <a class="btn btn-primary" href="#apply">Ready to start?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply -->
+  <section class="section" id="apply">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Apply for Online Coaching</h2>
+        <p>Apply below. We’ll follow up to book a short call and see if it’s a good fit.</p>
+      </div>
+
+      <div class="form-wrap">
+        <form class="form" id="applyForm">
+          <div class="row">
+            <label>
+              Full name*
+              <input required name="name" type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Email*
+              <input required name="email" type="email" placeholder="you@email.com" />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Phone (optional)
+              <input name="phone" type="tel" placeholder="+353 ..." />
+            </label>
+            <label>
+              Main goal*
+              <select required name="goal">
+                <option value="">Choose one…</option>
+                <option>Lose fat</option>
+                <option>Build strength</option>
+                <option>Improve energy & consistency</option>
+                <option>Get back on track</option>
+                <option>Not sure — need guidance</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Anything we should know? (optional)
+            <textarea name="notes" rows="4" placeholder="Injuries, schedule, equipment, etc."></textarea>
+          </label>
+
+          <button class="btn btn-primary full" type="submit">Submit application</button>
+          <p class="tiny muted">
+            Demo form: it will show a success message only. Later we’ll connect it to email/AWS.
+          </p>
+
+          <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+            ✅ Thanks! Your application was received. We’ll contact you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section alt" id="testimonials">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Client Testimonials</h2>
+        <p>Sample testimonials for your portfolio — you can replace these later.</p>
+      </div>
+
+      <div class="slider">
+        <button class="slider-btn" id="prev" aria-label="Previous testimonial">‹</button>
+
+        <div class="slide" id="slide"></div>
+
+        <button class="slider-btn" id="next" aria-label="Next testimonial">›</button>
+      </div>
+
+      <div class="dots" id="dots" aria-label="Testimonial navigation"></div>
+    </div>
+  </section>
+
+  <!-- Sticky CTA -->
+  <a class="sticky-cta" href="#apply">Apply for coaching</a>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Renu's Fitness Centre. Built for DevOps portfolio.</p>
+      <p class="muted">Next: Docker + AWS + CI/CD</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
