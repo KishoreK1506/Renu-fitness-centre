@@ -1,0 +1,38 @@
+name: Deploy to EC2 (Docker)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            # Make sure docker is running
+            sudo systemctl start docker || true
+
+            # Go to project folder on EC2
+            cd ~/renus-fitness-centre || (git clone https://github.com/KishoreK1506/renus-fitness-centre.git && cd renus-fitness-centre)
+
+            # Pull latest changes
+            git pull origin main
+
+            # Build and restart container
+            docker build -t renus-fitness-site .
+            docker rm -f renus-site || true
+            docker run -d -p 80:80 --name renus-site renus-fitness-site
+
+            docker ps
